@@ -6,4 +6,9 @@ deploy:
   - for dir in $(find . -mindepth 1 -maxdepth 1 -type d -not -path '*/\.*'); do cp -r $dir .cookbooks/; done
   - for dir in $(find . -mindepth 1 -maxdepth 1 -type d -not -path '*/\.*'); do berks vendor -b "$dir/Berksfile" .cookbooks; done
   - tar -czvf cookbooks.tar.gz -C .cookbooks .
-  - deploy_b2 "cookbooks" home-kitchen cookbooks.tar.gz
+  - b2 authorize-account $B2_ID $B2_KEY
+  - b2 upload-file home-kitchen cookbooks.tar.gz cookbooks.tar.gz
+  - b2 upload-file home-kitchen laptop_setup.json laptop_setup.json
+  - b2 upload-file home-kitchen bootstrap.sh bootstrap.sh
+  - b2 list-file-names home-kitchen > filelist.json
+  - b2 upload-file home-kitchen filelist.json filelist.json
