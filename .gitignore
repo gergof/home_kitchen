@@ -1,4 +1,6 @@
 # exclude sublime files
 *.sublime-workspace
 
+# build artifacts
 .cookbooks/
+cookbooks.tar.gz
