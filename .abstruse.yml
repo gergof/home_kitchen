@@ -1,0 +1,9 @@
+image: chef
+branches:
+  - master
+deploy:
+  - mkdir .cookbooks
+  - for dir in $(find . -mindepth 1 -maxdepth 1 -type d -not -path '*/\.*'); do cp $dir .cookbooks/; done
+  - for dir in $(find . -mindepth 1 -maxdepth 1 -type d -not -path '*/\.*'); do berks vendor -b "$dir/Berksfile" .cookbooks; done
+  - tar -czvf cookbooks.tar.gz -C .cookbooks .
+  - deploy_b2 "cookbooks" home-kitchen cookbooks.tar.gz

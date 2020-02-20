@@ -1,0 +1,10 @@
+name 'laptop_setup'
+maintainer 'Fandly Gergo-Zoltan'
+maintainer_email 'gergo@systemtest.tk'
+license 'GPLv3'
+description 'Sets up my laptop from home and work usage'
+version '0.1.0'
+chef_version '>= 14.0'
+source_url 'https://github.com/gergof/home_kitchen'
+
+depends 'line', '~> 2.7.0'

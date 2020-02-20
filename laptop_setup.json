@@ -1,0 +1,15 @@
+{
+	"user_name": "gergo",
+	"user_home": "/home/gergo",
+	"run_list": [
+		"recipe[laptop_setup::grub]",
+		"recipe[laptop_setup::utils]",
+		"recipe[laptop_setup::terminator]",
+		"recipe[laptop_setup::sublime]",
+		"recipe[laptop_setup::riot]",
+		"recipe[laptop_setup::nodejs]",
+		"recipe[laptop_setup::gnome]",
+		"recipe[laptop_setup::u2f]"
+	]
+}
+
