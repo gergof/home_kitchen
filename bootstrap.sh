@@ -1,7 +1,6 @@
 #!/bin/bash
 
-echo "Configuration to install: "
-read CONFIG
+echo "Configuration to install: ${1}"
 
 # update system and install curl
 sudo apt-get update
@@ -17,4 +16,4 @@ solo true
 chef_license 'accept'
 _EOF_
 
-sudo chef-solo -c solo.rb -j "https://f001.backblazeb2.com/file/home-kitchen/${CONFIG}.json" --recipe-url "https://f001.backblazeb2.com/file/home-kitchen/cookbooks.tar.gz"
+sudo chef-solo -c solo.rb -j "https://f001.backblazeb2.com/file/home-kitchen/${1}.json" --recipe-url "https://f001.backblazeb2.com/file/home-kitchen/cookbooks.tar.gz"

@@ -8,5 +8,5 @@ This is my cookbook collection that I use to automate my everyday life.
 ### Usage:
 
 ```bash
-wget -q -O - https://f001.backblazeb2.com/file/home-kitchen/bootstrap.sh | sudo bash
+wget -q -O - https://f001.backblazeb2.com/file/home-kitchen/bootstrap.sh | sudo bash -s -- $ENVIRONMENT
 ```
