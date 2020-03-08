@@ -8,6 +8,7 @@
 		"recipe[laptop_setup::sublime]",
 		"recipe[laptop_setup::riot]",
 		"recipe[laptop_setup::nodejs]",
+		"recipe[laptop_setup::virtualbox]",
 		"recipe[laptop_setup::gnome]",
 		"recipe[laptop_setup::u2f]"
 	]

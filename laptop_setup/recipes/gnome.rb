@@ -24,7 +24,7 @@ end
 gnome_setting "set favorites" do
 	domain "org.gnome.shell"
 	setting "favorite-apps"
-	value "\"['org.gnome.Nautilus.desktop', 'chromium.desktop', 'terminator.desktop', 'sublime_text.desktop', 'sublime_merge.desktop', 'riot-web.desktop']\""
+	value "\"['org.gnome.Nautilus.desktop', 'chromium.desktop', 'terminator.desktop', 'sublime_text.desktop', 'sublime_merge.desktop', 'riot-web.desktop', 'VirtualBox.desktop']\""
 end
 
 apt_package "chrome-gnome-shell"
@@ -44,4 +44,8 @@ end
 
 gnome_shell_extension "gnome-shell-screenshot@ttll.de" do
 	url "https://extensions.gnome.org/extension-data/gnome-shell-screenshotttll.de.v40.shell-extension.zip"
+end
+
+gnome_shell_extension "system-monitor@paradoxxx.zero.gmail.com" do
+	url "https://extensions.gnome.org/extension-data/system-monitorparadoxxx.zero.gmail.com.v38.shell-extension.zip"
 end
